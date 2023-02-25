@@ -2,11 +2,22 @@ package ru.netology;
 
 public class Radio {
     private int minChannelNumber = 0;
-    private int maxChannelNumber = 9;
+    private int defaultChannel = 10;
+    private int maxChannelNumber = defaultChannel - 1;
     private int currentChannelNumber;
     private int minVolume = 0;
-    private int maxVolume = 10;
+    private int maxVolume = 100;
     private int currentVolume;
+
+    public Radio() {
+
+    }
+
+    public Radio(int defaultChannel ) {
+
+        this.maxChannelNumber= defaultChannel -1;
+
+    }
 
     //GET
     public int getCurrentChannelNumber() {
@@ -69,4 +80,5 @@ public class Radio {
             currentChannelNumber = maxChannelNumber;
         }
     }
+
 }
